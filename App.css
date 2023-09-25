@@ -1,0 +1,70 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HLGtY6O2vUHqIyEbWdmBgA.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+#medium {
+    background-color: #e6e26fd9;
+}
+.flashcard.flipped {
+  transform: rotateX(180deg);
+}
+.card:hover {
+    box-shadow: 0 0 5px 2px #00000080;
+}
+
+.flashcard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 2px #0000004d;
+  transform-style: preserve-3d;
+  font-weight: 700;
+  height: 250px;
+  cursor: pointer;
+  transition: .15s;
+  transform: perspective(1000px) rotateX(var(--rotate-X, 0));
+}
+
+.front{
+  background-color: #3498db;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.back{
+  background-color: #e74c3c;
+  color: white;
+  
+}
+
+.hidden{
+  display: none;
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button{
+  background-color: aquamarine;
+  color: white;
+  border: none;
+  padding: auto;
+  cursor: pointer;
+}
